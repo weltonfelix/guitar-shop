@@ -4,7 +4,7 @@ interface ProductCardProps {
   price: number;
 }
 
-function ProductCard({ imageURL, price, title }: ProductCardProps) {
+export function ProductCard({ imageURL, price, title }: ProductCardProps) {
   const currency = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',
@@ -20,7 +20,7 @@ function ProductCard({ imageURL, price, title }: ProductCardProps) {
         <span className="text-sm block">{title}</span>
         <div className="flex justify-between">
           <span className="text-md text-bold">{currency.format(price)}</span>
-          <button className="bg-slate-400 hover:bg-slate-500 transition-colors rounded-md text-sm w-8 h-8 self-end">
+          <button className="bg-slate-400 hover:bg-slate-700 transition-colors rounded-md text-sm w-8 h-8 self-end">
             +
           </button>
         </div>
@@ -28,5 +28,3 @@ function ProductCard({ imageURL, price, title }: ProductCardProps) {
     </a>
   );
 }
-
-export default ProductCard;
