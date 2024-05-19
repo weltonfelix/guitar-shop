@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Violão Di Giorgio Clássico 38E",
+    "price": 1200,
+    "description": "Violão Di Giorgio Clássico 38E com cordas de nylon, tampo em spruce, corpo em linden, escala em rosewood e tarraxas cromadas.",
+    "imageURL": "/assets/products/guitar1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Fender American Professional II Stratocaster®",
+    "price": "18000",
+    "description": "A nova linha American Professional II traz mais de sessenta anos de inovação, inspiração e evolução para atender os mais exigentes músicos do planeta. O instrumento está mais moderno, mais confortável, e muito mais bonito! O braço ganhou contornos mais acentuados para uma perfeita \"pegada\" com extremo conforto. O corpo também ganhou novos contornos para um fácil acesso nas notas mais agudas da sua escala. Novos captadores \"V-Mod II\" são mais articulados para proporcionarem timbres quentes em todas as posições e equalizações! A nova ponte de dois pivôs proporciona um incrível sustain com definição e brilho. A nova American Pro II chegou para continuar escrevendo a história da música no mundo!",
+    "imageURL": "/assets/products/fender.jpg"
+  }
+]
