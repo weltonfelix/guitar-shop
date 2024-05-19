@@ -1,3 +1,4 @@
+import { ChangeEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Bounce, toast } from 'react-toastify';
 
@@ -7,10 +8,25 @@ import { Button } from '../components/Buttons';
 
 import { useCartStore } from '../cartStore';
 import { currency } from '../util/currencyFormatter';
+import { formatCEP, formatCPF, formatPhone } from '../util/formatters';
 
 export function CheckoutPage() {
   const { products, clearCart } = useCartStore();
   const navigate = useNavigate();
+
+  const [cpf, setCPF] = useState('');
+  const [cep, setCEP] = useState('');
+  const [phone, setPhone] = useState('');
+
+  function handleChangeCPF(e: ChangeEvent<HTMLInputElement>) {
+    setCPF(formatCPF(e.target.value));
+  }
+  function handleChangeCEP(e: ChangeEvent<HTMLInputElement>) {
+    setCEP(formatCEP(e.target.value));
+  }
+  function handleChangePhone(e: ChangeEvent<HTMLInputElement>) {
+    setPhone(formatPhone(e.target.value));
+  }
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -71,6 +87,8 @@ export function CheckoutPage() {
                 id="cpf"
                 type="text"
                 autoComplete="cpf"
+                value={cpf}
+                onChange={(e) => handleChangeCPF(e)}
                 required
               />
               <Input
@@ -85,6 +103,8 @@ export function CheckoutPage() {
                 id="phone"
                 type="tel"
                 autoComplete="tel"
+                value={phone}
+                onChange={(e) => handleChangePhone(e)}
                 required
               />
             </fieldset>
@@ -113,6 +133,8 @@ export function CheckoutPage() {
                 id="zip"
                 type="text"
                 autoComplete="zip"
+                value={cep}
+                onChange={(e) => handleChangeCEP(e)}
                 required
               />
               <Input
