@@ -12,5 +12,33 @@
     "price": "18000",
     "description": "A nova linha American Professional II traz mais de sessenta anos de inovação, inspiração e evolução para atender os mais exigentes músicos do planeta. O instrumento está mais moderno, mais confortável, e muito mais bonito! O braço ganhou contornos mais acentuados para uma perfeita \"pegada\" com extremo conforto. O corpo também ganhou novos contornos para um fácil acesso nas notas mais agudas da sua escala. Novos captadores \"V-Mod II\" são mais articulados para proporcionarem timbres quentes em todas as posições e equalizações! A nova ponte de dois pivôs proporciona um incrível sustain com definição e brilho. A nova American Pro II chegou para continuar escrevendo a história da música no mundo!",
     "imageURL": "/assets/products/fender.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Violão Elétrico Michael Folk VMF400",
+    "price": 1099.99,
+    "description": "O Michael VMF400 é um violão folk cutaway, com cordas em aço, que impacta pelo timbre definido e alta projeção sonora! É construído com madeiras nobres (tampos em Sitka e/ou Sapele), além de possuir um lindo visual, com destaque para o filete ABS preto e o acabamento fosco, que reforça o aspecto amadeirado. Vem ainda com tensor Dual-Action, equalizador de 3 bandas (com afinador), saída P10 e captação Piezo! Escolha o VMF400, sem dúvidas, um violão apaixonante! O Michael VMF400 possui construção diferenciada, com destaque para as opções de tampo em Sitka (que dá brilho aos médio-agudos e excelentes harmônicos) e Sapele (que encorpa a sonoridade, deixando-a mais imponente!) O violão Folk VMF400 vem com tensor Dual-Action, recurso que regula a curvatura do braço, deixando-o retilíneo, garantindo uma tocabilidade precisa e confortável. Um dos detalhes diferenciados deste violão é o filete ABS, na cor preta, que o deixa com um aspecto mais estilizado, refinado. Vale ressaltar também o belíssimo acabamento fosco, amadeirado, tanto do modelo Sapele quanto do Sitka. O VMF400 possui captação Piezo, que garante a mesma fidelidade sonora quando está plugado. Vem ainda com o excelente equalizador Michael SE-31, de 3 bandas, que traz afinador cromático embutido. Vale ressaltar também sua saída P10, com boa estabilidade de sinal! O violão VMF400 é um modelo folk cutway, ou seja, possui corte no corpo que facilita o acesso às notas mais agudas, trazendo mais conforto e precisão para seus arranjos musicais É violão de ótimo equilíbrio sonoro e definição! Um dos preferidos de quem curte sertanejo, rock, blues, country, e soul music. Irá atendê-lo nos shows, ensaios e outras ocasiões!",
+    "imageURL": "/assets/products/michael.webp"
+  },
+  {
+    "id": 4,
+    "title": "Guitarra Super Stratocaster Ibanez GRX 40",
+    "price": 1900,
+    "description": "Com vontade de aprender a tocar guitarra? Ou já domina o instrumento e está em busca de um modelo à altura? De qualquer forma, a GRX-40 proporciona uma tocabilidade que só se encontra em sonhos! Você não vai querer perder. Uma produção da inspiradora Ibanez, essa Super Strato dispõe de tudo que você precisa para arrasar em cima do palco: conforto, sonoridade equilibrada e visual maneiro!",
+    "imageURL": "/assets/products/guitar4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Violão Náilon Eletroacústico Flat Performance Pro NFLE N",
+    "price": 2050,
+    "description": "O NFLE, o mais celebrado dos nossos instrumentos flat, faz parte da linha de produtos da empresa desde o final da década de 80. Revitalizado, porém com suas características mais marcantes de construção e sonoridade preservadas, retorna ao mercado pronto para tornar-se novamente referência de qualidade musical, e assim demonstrar às novas gerações a razão de a Giannini possuir tanta tradição. Chegar aos 122 anos esbanjando essa vitalidade é para poucos...",
+    "imageURL": "/assets/products/guitar5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Baixo Tagima TJB-435",
+    "price": 5700,
+    "description": "Um modelo clássico onde a Tagima buscou manter a sonoridade vintage com os captadores Tagima J Alnico Jazz somados a madeira do corpo em marupá que deixou o baixo mais leve e mais equilibrado.",
+    "imageURL": "/assets/products/bass6.jpg"
   }
 ]
