@@ -1,9 +1,10 @@
 import { MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
+import { Bounce, toast } from 'react-toastify';
+import { FaPlus } from 'react-icons/fa';
 
 import { useCartStore } from '../cartStore';
 import { currency } from '../util/currencyFormatter';
-import { Bounce, toast } from 'react-toastify';
 
 interface ProductCardProps {
   id: number;
@@ -51,9 +52,20 @@ export function ProductCard({ imageURL, id, price, title }: ProductCardProps) {
           <span className="text-md text-bold">{currency.format(price)}</span>
           <button
             onClick={handleAddToCart}
-            className="bg-slate-400 hover:bg-slate-700 transition-colors rounded-md text-sm w-8 h-8 self-end"
+            className="
+            bg-slate-400
+            hover:bg-slate-700
+            transition-colors
+            rounded-md
+            text-sm
+            w-8
+            h-8
+            self-end
+            flex
+            items-center
+            justify-center"
           >
-            +
+            <FaPlus className='text-slate-100' />
           </button>
         </div>
       </div>
