@@ -26,8 +26,16 @@ export function Root() {
           >
             <FaShoppingCart size={24} />
             {cartItemsCount > 0 && (
-              <span className="absolute top-[0.6rem] left-[1.2rem] mx-auto text-slate-700 text-xs">
-                {cartItemsCount}
+              <span
+                className={`absolute top-[0.6rem] ${
+                  cartItemsCount < 10
+                    ? 'left-[1.2rem]'
+                    : cartItemsCount < 100
+                    ? 'left-[1rem]'
+                    : 'left-[0.9rem] text-[10px]'
+                } mx-auto text-slate-700 text-xs`}
+              >
+                {cartItemsCount < 100 ? cartItemsCount : '99+'}
               </span>
             )}
             Carrinho
