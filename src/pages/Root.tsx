@@ -1,7 +1,14 @@
 import { Link, Outlet } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+
 import { LinkButton } from '../components/Buttons';
 
+import { useCartStore } from '../cartStore';
+
 export function Root() {
+  const { countProducts } = useCartStore();
+  const cartItemsCount = countProducts();
+
   return (
     <>
       <header className="fixed w-full bg-[#f7fafc] top-0">
@@ -11,12 +18,15 @@ export function Root() {
               GuitarShop
             </h1>
           </Link>
-          <LinkButton to="/cart">Carrinho</LinkButton>
+          <LinkButton to="/cart">
+            Carrinho{cartItemsCount > 0 && ` (${cartItemsCount})`}
+          </LinkButton>
         </div>
       </header>
       <main className="px-8 my-6 mt-24 max-w-[992px] mx-auto">
         <Outlet />
       </main>
+      <ToastContainer />
     </>
   );
 }

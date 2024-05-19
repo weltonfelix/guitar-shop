@@ -13,6 +13,7 @@ import { CartPage } from './pages/CartPage.tsx';
 import { CheckoutPage } from './pages/CheckoutPage.tsx';
 
 import './index.css';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 const router = createBrowserRouter([
   {

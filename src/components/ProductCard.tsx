@@ -1,7 +1,9 @@
+import { MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useCartStore } from '../cartStore';
 import { currency } from '../util/currencyFormatter';
+import { Bounce, toast } from 'react-toastify';
 
 interface ProductCardProps {
   id: number;
@@ -12,6 +14,28 @@ interface ProductCardProps {
 
 export function ProductCard({ imageURL, id, price, title }: ProductCardProps) {
   const { addToCart } = useCartStore();
+
+  function handleAddToCart(e: MouseEvent<HTMLButtonElement>) {
+    e.preventDefault();
+    addToCart({
+      id,
+      title,
+      price,
+      imageURL,
+      amount: 1,
+    });
+    toast.success('Produto adicionado ao carrinho!', {
+      position: 'bottom-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+      transition: Bounce,
+    });
+  }
 
   return (
     <Link
@@ -26,16 +50,7 @@ export function ProductCard({ imageURL, id, price, title }: ProductCardProps) {
         <div className="flex justify-between">
           <span className="text-md text-bold">{currency.format(price)}</span>
           <button
-            onClick={(e) => {
-              e.preventDefault();
-              addToCart({
-                id,
-                title,
-                price,
-                imageURL,
-                amount: 1,
-              });
-            }}
+            onClick={handleAddToCart}
             className="bg-slate-400 hover:bg-slate-700 transition-colors rounded-md text-sm w-8 h-8 self-end"
           >
             +

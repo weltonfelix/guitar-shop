@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { Bounce, toast } from 'react-toastify';
 
 import { CartProduct } from '../components/CartProduct';
 import { Input } from '../components/Input';
@@ -13,8 +14,20 @@ export function CheckoutPage() {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    clearCart();
-    navigate('/');
+    toast.success('Compra realizada com sucesso!', {
+      position: 'bottom-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: 'light',
+      transition: Bounce,
+      onClose: () => {
+        clearCart();
+        navigate('/');
+      },
+    });
   }
 
   return (

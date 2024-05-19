@@ -1,9 +1,11 @@
 import axios from 'axios';
 import { useLoaderData } from 'react-router-dom';
+import { Bounce, toast } from 'react-toastify';
 
-import { currency } from '../util/currencyFormatter.ts';
-import { useCartStore } from '../cartStore.ts';
 import { Button } from '../components/Buttons.tsx';
+
+import { useCartStore } from '../cartStore.ts';
+import { currency } from '../util/currencyFormatter.ts';
 
 export async function loader({ params }: { params: { id: string } }) {
   const { data } = (await axios.get(`/products.json`)) as { data: Product[] };
@@ -16,6 +18,22 @@ export function ProductPage() {
   const { product } = useLoaderData() as { product: Product };
 
   const { addToCart } = useCartStore();
+
+  function handleAddToCart() {
+    addToCart({ ...product, amount: 1 });
+
+    toast.success('Produto adicionado ao carrinho!', {
+      position: 'bottom-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+      transition: Bounce,
+    });
+  }
 
   if (!product) {
     return (
@@ -38,10 +56,7 @@ export function ProductPage() {
             <h2 className="text-3xl">{product.title}</h2>
             <p className="text-lg">{currency.format(product.price)}</p>
           </div>
-          <Button
-            onClick={() => addToCart({ ...product, amount: 1 })}
-            className="w-fit"
-          >
+          <Button onClick={handleAddToCart} className="w-fit">
             Adicionar ao Carrinho
           </Button>
         </div>

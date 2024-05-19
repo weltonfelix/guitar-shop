@@ -7,6 +7,7 @@ interface ProductInCart extends Omit<Product, 'description'> {
 
 interface CartState {
   products: ProductInCart[];
+  countProducts: () => number;
   addToCart: (product: ProductInCart) => void;
   updateAmount: (productId: number, newAmount: number) => void;
   removeFromCart: (productId: number) => void;
@@ -16,8 +17,11 @@ interface CartState {
 export const useCartStore = create<CartState>()(
   devtools(
     persist(
-      (set) => ({
+      (set, get) => ({
         products: [],
+        countProducts() {
+          return get().products.reduce((prev, curr) => prev + curr.amount, 0);
+        },
         addToCart(product) {
           set((state) => {
             const isAlreadyInCart = state.products.find(
