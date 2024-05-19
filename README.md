@@ -61,4 +61,4 @@ This project is under the MIT license. See the [LICENSE](LICENSE) for details.
 
 ---
 
-Made with ♥ Welton Felix :wave: [Get in touch!](mailto:wplf@cin.ufpe.br)
+Made with ♥ by Welton Felix :wave: [Get in touch!](mailto:wplf@cin.ufpe.br)
