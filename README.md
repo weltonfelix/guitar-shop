@@ -1,6 +1,6 @@
 # GuitarShop
 
-Loja de instrumentos músicas feita utilizando React.
+Loja de instrumentos musicais feita utilizando React.
 
 <p align="center">
   <img alt="Github language counter" src="https://img.shields.io/github/languages/count/weltonfelix/guitar-shop?color=%2304D361">
